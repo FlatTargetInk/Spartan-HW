@@ -1,0 +1,355 @@
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -nt timestamp -uc Hardware.ucf -p xc3s500e-fg320-4 Top_Level.ngc
+Top_Level.ngd
+
+Reading NGO file "/home/robert/Documents/Hardware/SpartanHardware/Top_Level.ngc"
+...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "Hardware.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET "BTN_NORTH" LOC = "V4" |>
+   [Hardware.ucf(12)]: NET "BTN_NORTH" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "BTN_NORTH" LOC = "V4" |> [Hardware.ucf(12)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL |>
+   [Hardware.ucf(12)]: NET "BTN_NORTH" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLDOWN;> [Hardware.ucf(12)]: NET
+   "BTN_NORTH" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "BTN_SOUTH" LOC = "K17" |>
+   [Hardware.ucf(13)]: NET "BTN_SOUTH" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "BTN_SOUTH" LOC = "K17" |> [Hardware.ucf(13)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL |>
+   [Hardware.ucf(13)]: NET "BTN_SOUTH" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLDOWN;> [Hardware.ucf(13)]: NET
+   "BTN_SOUTH" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "BTN_EAST" LOC = "H13" |>
+   [Hardware.ucf(14)]: NET "BTN_EAST" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "BTN_EAST" LOC = "H13" |> [Hardware.ucf(14)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL |>
+   [Hardware.ucf(14)]: NET "BTN_EAST" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLDOWN;> [Hardware.ucf(14)]: NET
+   "BTN_EAST" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "BTN_WEST" LOC = "D18" |>
+   [Hardware.ucf(15)]: NET "BTN_WEST" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "BTN_WEST" LOC = "D18" |> [Hardware.ucf(15)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL |>
+   [Hardware.ucf(15)]: NET "BTN_WEST" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLDOWN;> [Hardware.ucf(15)]: NET
+   "BTN_WEST" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ROT_A" LOC = "K18" |>
+   [Hardware.ucf(18)]: NET "ROT_A" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ROT_A" LOC = "K18" |> [Hardware.ucf(18)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL |>
+   [Hardware.ucf(18)]: NET "ROT_A" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLUP;> [Hardware.ucf(18)]: NET "ROT_A"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ROT_B" LOC = "G18" |>
+   [Hardware.ucf(19)]: NET "ROT_B" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ROT_B" LOC = "G18" |> [Hardware.ucf(19)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL |>
+   [Hardware.ucf(19)]: NET "ROT_B" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLUP;> [Hardware.ucf(19)]: NET "ROT_B"
+   not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ROT_CENTER" LOC = "V16" |>
+   [Hardware.ucf(20)]: NET "ROT_CENTER" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ROT_CENTER" LOC = "V16" |> [Hardware.ucf(20)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL |>
+   [Hardware.ucf(20)]: NET "ROT_CENTER" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <PULLDOWN;> [Hardware.ucf(20)]: NET
+   "ROT_CENTER" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SF_D<8>" LOC = "DB4";>
+   [Hardware.ucf(33)]: NET "SF_D<8>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SF_D<8>" LOC = "DB4";> [Hardware.ucf(33)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SF_D<9>" LOC = "DB5";>
+   [Hardware.ucf(34)]: NET "SF_D<9>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SF_D<9>" LOC = "DB5";> [Hardware.ucf(34)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SF_D<10>" LOC = "DB6";>
+   [Hardware.ucf(35)]: NET "SF_D<10>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SF_D<10>" LOC = "DB6";> [Hardware.ucf(35)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SF_D<11>" LOC = "DB7";>
+   [Hardware.ucf(36)]: NET "SF_D<11>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SF_D<11>" LOC = "DB7";> [Hardware.ucf(36)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LCD_E"   LOC = "M18";>
+   [Hardware.ucf(37)]: NET "LCD_E" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LCD_E"   LOC = "M18";> [Hardware.ucf(37)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LCD_RS"  LOC = "L18";>
+   [Hardware.ucf(38)]: NET "LCD_RS" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LCD_RS"  LOC = "L18";> [Hardware.ucf(38)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LCD_RW"  LOC = "L17";>
+   [Hardware.ucf(39)]: NET "LCD_RW" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LCD_RW"  LOC = "L17";> [Hardware.ucf(39)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "VGA_RED" LOC = "H14";>
+   [Hardware.ucf(42)]: NET "VGA_RED" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "VGA_RED" LOC = "H14";> [Hardware.ucf(42)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "VGA_GREEN" LOC = "H15";>
+   [Hardware.ucf(43)]: NET "VGA_GREEN" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "VGA_GREEN" LOC = "H15";> [Hardware.ucf(43)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "VGA_BLUE" LOC = "G15";>
+   [Hardware.ucf(44)]: NET "VGA_BLUE" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "VGA_BLUE" LOC = "G15";> [Hardware.ucf(44)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "VGA_HSYNC" LOC = "F15";>
+   [Hardware.ucf(45)]: NET "VGA_HSYNC" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "VGA_HSYNC" LOC = "F15";> [Hardware.ucf(45)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "VGA_VSYNC" LOC = "F14";>
+   [Hardware.ucf(46)]: NET "VGA_VSYNC" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "VGA_VSYNC" LOC = "F14";> [Hardware.ucf(46)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RS232_DCE_RXD" LOC = "R7"  |>
+   [Hardware.ucf(49)]: NET "RS232_DCE_RXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RS232_DCE_RXD" LOC = "R7"  |> [Hardware.ucf(49)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL;> [Hardware.ucf(49)]:
+   NET "RS232_DCE_RXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RS232_DCE_TXD" LOC = "M14" |>
+   [Hardware.ucf(50)]: NET "RS232_DCE_TXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RS232_DCE_TXD" LOC = "M14" |> [Hardware.ucf(50)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL |>
+   [Hardware.ucf(50)]: NET "RS232_DCE_TXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <DRIVE = 8 |> [Hardware.ucf(50)]: NET
+   "RS232_DCE_TXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <SLEW = SLOW;> [Hardware.ucf(50)]: NET
+   "RS232_DCE_TXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RS232_DTE_RXD" LOC = "U8"  |>
+   [Hardware.ucf(51)]: NET "RS232_DTE_RXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RS232_DTE_RXD" LOC = "U8"  |> [Hardware.ucf(51)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL;> [Hardware.ucf(51)]:
+   NET "RS232_DTE_RXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RS232_DTE_TXD" LOC = "M13" |>
+   [Hardware.ucf(52)]: NET "RS232_DTE_TXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RS232_DTE_TXD" LOC = "M13" |> [Hardware.ucf(52)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD = LVTTL |>
+   [Hardware.ucf(52)]: NET "RS232_DTE_TXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <DRIVE = 8 |> [Hardware.ucf(52)]: NET
+   "RS232_DTE_TXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <SLEW = SLOW;> [Hardware.ucf(52)]: NET
+   "RS232_DTE_TXD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:    45
+  Number of warnings:  23
+
+Total memory usage is 389452 kilobytes
+
+Total REAL time to NGDBUILD completion:  1 sec
+Total CPU time to NGDBUILD completion:   1 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "Top_Level.bld"...
