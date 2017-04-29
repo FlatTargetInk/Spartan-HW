@@ -34,10 +34,11 @@ entity rotary_machine is
 	Port(	CLK	: in STD_LOGIC;
 			EN		: in STD_LOGIC;
 			INS	: in STD_LOGIC_VECTOR(1 downto 0);	-- 1->A, 0->B
-			DIR	: out STD_LOGIC_VECTOR(1 downto 0);
+			DIR	: out STD_LOGIC_VECTOR(1 downto 0));
+			
 end rotary_machine;
 
-architecture Behavioral of rotary_machine is
+architecture Mixed of rotary_machine is
 	
 	type STATE_TYPE IS (IDLE, RISING_LEFT, RISING_RIGHT);
 	signal cur_state	: STATE_TYPE;
@@ -49,11 +50,10 @@ begin
 	begin
 		if (CLK'event and CLK = '1' and EN = '1')
 		then
-			case STATE is
-				when IDLE =>
-					
-				when "01"
+			next_state <= cur_state;
+		end if
+	end process
+	
 
-
-end Behavioral;
+end Mixed;
 
