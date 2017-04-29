@@ -1,1 +1,4 @@
+vhdl work "debounce.vhd"
+vhdl work "led_increment.vhd"
+vhdl work "button_debounce.vhd"
 vhdl work "Top_Level.vhd"

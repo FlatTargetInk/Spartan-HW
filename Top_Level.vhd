@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use work.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -30,21 +31,52 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Top_Level is
-	Port(	CLK	: in STD_LOGIC;
-		PBN	: in STD_LOGIC;
-		PBS	: in STD_LOGIC;
-		PBE	: in STD_LOGIC;
-		PBW	: in STD_LOGIC;
-		SW	: in STD_LOGIC_VECTOR(3 downto 0);
-		LED	: out STD_LOGIC_VECTOR(7 downto 0)
-	);
+
+	Port(	CLK		: in STD_LOGIC;
+		BTN_NORTH	: in STD_LOGIC;
+		BTN_SOUTH	: in STD_LOGIC;
+		BTN_EAST		: in STD_LOGIC;
+		BTN_WEST		: in STD_LOGIC;
+		ROT_CENTER	: in STD_LOGIC;
+		SW				: in STD_LOGIC_VECTOR(3 downto 0);
+		LED			: out STD_LOGIC_VECTOR(7 downto 0));
+		
 end Top_Level;
 
 architecture Structural of Top_Level is
 
+	----> Management <----
+	signal RESET	: STD_LOGIC := '0';
+	signal BTNS		: STD_LOGIC_VECTOR(3 downto 0);
+	----> Inputs <----
+	signal SCLK		: STD_LOGIC := '0';
+	signal ENABLE	: STD_LOGIC := '1';	-- May want to drive this signal with a switch
+	signal DBTN		: STD_LOGIC_VECTOR (3 downto 0) := (OTHERS => '0');
+	----> Outputs <----
+	signal LED_OUT	: STD_LOGIC_VECTOR (7 downto 0) := (OTHERS => '0');
+
 begin
 
-LED(0) <= PBN;
-
+	------ Place UUT Here ------
+	----------------------------
+	Incrementer: entity work.led_increment
+	port map(INPUT	=> DBTN(2),
+				EN		=> ENABLE,
+				RST	=> RESET,
+				LEDS	=> LED_OUT);
+	
+	------ Hardware Units ------
+	----------------------------
+	BTNS <= BTN_EAST & ROT_CENTER & BTN_NORTH & BTN_WEST;
+	Button_Debounce: entity work.button_debounce
+	port map(CLK	=> CLK,
+				EN		=> ENABLE,
+				BTN	=> BTNS,
+				DBTN	=> DBTN);
+	
+	LED <= LED_OUT;
+	RESET <= BTN_SOUTH;
+	
 end Structural;
 
+-- vim:set ts=3 sw=3 noexpandtab:
