@@ -82,7 +82,6 @@ begin
 		RISING_LEFT when stg_left = '1' else	-- Both left and right shouldn't happen
 		RISING_RIGHT when stg_right = '1' else
 		IDLE;
-	
 
 end Mixed;
 
