@@ -58,7 +58,7 @@ begin
 				OUTPUT	=> DEBOUNCED(1));
 	
 	----> Change state <----
-	the_wankel: entity work.rotary_machine
+	--the_wankel: entity work.rotary_machine
 	
 
 end Structural;
