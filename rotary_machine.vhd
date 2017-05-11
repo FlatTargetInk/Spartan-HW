@@ -31,57 +31,50 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity rotary_machine is
 	
-	Port(	CLK	: in STD_LOGIC;
-			EN		: in STD_LOGIC;
+	Port(	EN		: in STD_LOGIC;
 			INS	: in STD_LOGIC_VECTOR(1 downto 0);	-- 1->A, 0->B
 			DIR	: out STD_LOGIC_VECTOR(1 downto 0)); -- Event shown by transition
 			
 end rotary_machine;
 
-architecture Mixed of rotary_machine is
+architecture Behavioral of rotary_machine is
 	
 	type STATE_TYPE IS (IDLE, RISING_LEFT, RISING_RIGHT);
 	signal cur_state	: STATE_TYPE;
-	signal next_state	: STATE_TYPE;
-	signal left			: STD_LOGIC;
-	signal stg_left	: STD_LOGIC;
-	signal right		: STD_LOGIC;
-	signal stg_right	: STD_LOGIC;
-
+	--signal next_state	: STATE_TYPE;
+	signal OUTBUF		: STD_LOGIC_VECTOR(1 downto 0) := (OTHERS => '0');
+	
 begin
+	DIR <= OUTBUF;
 	
-	--> Latch states <--
-	process(CLK)
+	change_state: process(INS)
 	begin
-		if (CLK'event and CLK = '1' and EN = '1')
-		then
-			cur_state <= next_state;
-		end if;
+	--	if (INS'event) --and (EN = '1')
+	--	then
+			case cur_state is
+				when RISING_LEFT =>
+					if (INS = "11")
+					then
+						OUTBUF(1) <= not OUTBUF(1);
+					end if;
+					cur_state <= IDLE;
+				when RISING_RIGHT =>
+					if (INS = "11")
+					then
+						OUTBUF(0) <= not OUTBUF(0);
+					end if;
+					cur_state <= IDLE;
+				when IDLE =>
+					case INS is
+						when "10" => cur_state <= RISING_LEFT;
+						when "01" => cur_state <= RISING_RIGHT;
+						when others => cur_state <= IDLE;
+					end case;
+			end case;
+			--cur_state <= next_state;
+	--	end if;
 	end process;
-	
-	--> Potential for left turn <--
-	with INS select left <=
-		'1' when "10",
-		'0' when OTHERS;
-	
-	with cur_state select stg_left <=
-		left when IDLE,
-		'0' when OTHERS;
-	
-	--> Potential for right turn <--
-	with INS select right <=
-		'1' when "01",
-		'0' when OTHERS;
-	
-	with cur_state select stg_right <=
-		right when IDLE,
-		'0' when OTHERS;
-		
-	--> Final decision <--
-	next_state <=
-		RISING_LEFT when stg_left = '1' else	-- Both left and right shouldn't happen
-		RISING_RIGHT when stg_right = '1' else
-		IDLE;
 
-end Mixed;
+end Behavioral;
 
+-- vim:set ts=3 sw=3 noexpandtab:

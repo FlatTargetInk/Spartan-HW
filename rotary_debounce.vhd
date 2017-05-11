@@ -46,19 +46,24 @@ begin
 
 	----> Debounce input <----
 	ROT_0: entity work.debounce
+	generic map(wait_time => 15)
 	port map(CLK		=> CLK,
 				EN			=> EN,
 				INPUT		=> ROTIN(0),
 				OUTPUT	=> DEBOUNCED(0));
 	
 	ROT_1: entity work.debounce
+	generic map(wait_time => 15)
 	port map(CLK		=> CLK,
 				EN			=> EN,
-				INPUT		=> ROT(1),
+				INPUT		=> ROTIN(1),
 				OUTPUT	=> DEBOUNCED(1));
 	
 	----> Change state <----
-	--the_wankel: entity work.rotary_machine
+	the_wankel: entity work.rotary_machine
+	port map(EN			=> EN,
+				INS		=> DEBOUNCED,
+				DIR		=> ROUT);
 	
 
 end Structural;

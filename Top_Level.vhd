@@ -38,6 +38,8 @@ entity Top_Level is
 		BTN_EAST		: in STD_LOGIC;
 		BTN_WEST		: in STD_LOGIC;
 		ROT_CENTER	: in STD_LOGIC;
+		ROT_A			: in STD_LOGIC;
+		ROT_B			: in STD_LOGIC;
 		SW				: in STD_LOGIC_VECTOR(3 downto 0);
 		LED			: out STD_LOGIC_VECTOR(7 downto 0));
 		
@@ -48,10 +50,12 @@ architecture Structural of Top_Level is
 	----> Management <----
 	signal RESET	: STD_LOGIC := '0';
 	signal BTNS		: STD_LOGIC_VECTOR(3 downto 0);
+	signal T_ROTIN	: STD_LOGIC_VECTOR(1 downto 0);
 	----> Inputs <----
 	signal SCLK		: STD_LOGIC := '0';
 	signal ENABLE	: STD_LOGIC := '1';	-- May want to drive this signal with a switch
 	signal DBTN		: STD_LOGIC_VECTOR (3 downto 0) := (OTHERS => '0');
+	signal ROTARY	: STD_LOGIC_VECTOR (1 downto 0) := (OTHERS => '0');	-- 1 means left, 0 means right, signaled by state transition
 	----> Outputs <----
 	signal LED_OUT	: STD_LOGIC_VECTOR (7 downto 0) := (OTHERS => '0');
 
@@ -59,11 +63,13 @@ begin
 
 	------ Place UUT Here ------
 	----------------------------
-	Incrementer: entity work.led_increment
-	port map(INPUT	=> DBTN(2),
-				EN		=> ENABLE,
-				RST	=> RESET,
-				LEDS	=> LED_OUT);
+--	Incrementer: entity work.led_increment
+--	port map(INPUT	=> ROTARY(0),
+--				EN		=> ENABLE,
+--				RST	=> RESET,
+--				LEDS	=> LED_OUT);
+	
+	LED_OUT <= "000000" & ROTARY;
 	
 	------ Hardware Units ------
 	----------------------------
@@ -73,6 +79,13 @@ begin
 				EN		=> ENABLE,
 				BTN	=> BTNS,
 				DBTN	=> DBTN);
+	
+	T_ROTIN <= ROT_A & ROT_B;
+	Rotary_Encoder: entity work.rotary_debounce
+	port map(CLK	=> CLK,
+				EN		=> ENABLE,
+				ROTIN	=> T_ROTIN,
+				ROUT	=> ROTARY);
 	
 	LED <= LED_OUT;
 	RESET <= BTN_SOUTH;
